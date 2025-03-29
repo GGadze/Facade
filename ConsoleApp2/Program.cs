@@ -1,4 +1,6 @@
-﻿namespace ConsoleApp2
+﻿using ConsoleApp2.Звуковая_система;
+
+namespace ConsoleApp2
 {
     class Program
     {
@@ -7,10 +9,11 @@
             Amplifier amplifier = new Amplifier();
             DVDPlayer dvdPlayer = new DVDPlayer();
             Projector projector = new Projector();
+            SoundSystem soundSystem = new SoundSystem();
 
-            HomeTheaterFacade homeTheater = new HomeTheaterFacade(amplifier, dvdPlayer, projector);
+            HomeTheaterFacade homeTheater = new HomeTheaterFacade(amplifier, dvdPlayer, projector, soundSystem);
 
-            homeTheater.WatchMovie("Гарри Поттер и принц-полукровка");
+            homeTheater.WatchMovie("Гарри Поттер и Орден Феникса");
             homeTheater.EndMovie();
         }
     }
